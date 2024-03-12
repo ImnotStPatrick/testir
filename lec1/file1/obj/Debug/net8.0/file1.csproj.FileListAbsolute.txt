@@ -1,0 +1,15 @@
+C:\Users\4721271\Desktop\test\testir\lec1\file1\bin\Debug\net8.0\file1.exe
+C:\Users\4721271\Desktop\test\testir\lec1\file1\bin\Debug\net8.0\file1.deps.json
+C:\Users\4721271\Desktop\test\testir\lec1\file1\bin\Debug\net8.0\file1.runtimeconfig.json
+C:\Users\4721271\Desktop\test\testir\lec1\file1\bin\Debug\net8.0\file1.dll
+C:\Users\4721271\Desktop\test\testir\lec1\file1\bin\Debug\net8.0\file1.pdb
+C:\Users\4721271\Desktop\test\testir\lec1\file1\obj\Debug\net8.0\file1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\4721271\Desktop\test\testir\lec1\file1\obj\Debug\net8.0\file1.AssemblyInfoInputs.cache
+C:\Users\4721271\Desktop\test\testir\lec1\file1\obj\Debug\net8.0\file1.AssemblyInfo.cs
+C:\Users\4721271\Desktop\test\testir\lec1\file1\obj\Debug\net8.0\file1.csproj.CoreCompileInputs.cache
+C:\Users\4721271\Desktop\test\testir\lec1\file1\obj\Debug\net8.0\file1.sourcelink.json
+C:\Users\4721271\Desktop\test\testir\lec1\file1\obj\Debug\net8.0\file1.dll
+C:\Users\4721271\Desktop\test\testir\lec1\file1\obj\Debug\net8.0\refint\file1.dll
+C:\Users\4721271\Desktop\test\testir\lec1\file1\obj\Debug\net8.0\file1.pdb
+C:\Users\4721271\Desktop\test\testir\lec1\file1\obj\Debug\net8.0\file1.genruntimeconfig.cache
+C:\Users\4721271\Desktop\test\testir\lec1\file1\obj\Debug\net8.0\ref\file1.dll
