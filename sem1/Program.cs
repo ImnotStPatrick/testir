@@ -33,13 +33,14 @@ int b = Convert.ToInt32(Console.ReadLine());
 4 => -4, -3, -2, -1, 0, 1, 2, 3, 4
 2 => -2, -1, 0, 1, 2 */
 
+
 Console.Write(" введите число: ");
 int n = Convert.ToInt32(Console.ReadLine());
-int i = 1;
+// int i = 1;
 int a = -n;
  while ( a <= n)
  {
-    Console.Write(i);
+    Console.Write(a);
     Console.Write(' ');
-    //  i = i + 1;
+    a = a + 1;
  }
