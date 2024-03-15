@@ -148,5 +148,198 @@ else
 Console.WriteLine(" введите число: ");
 int n = Convert.ToInt32(Console.ReadLine());
 int a = n % 10;
-Console.WriteLine(a); */
+Console.WriteLine(a); 
 
+
+
+
+
+// домашнее задание, 1. 
+using System;
+
+public class Answer {
+    static void CompareNumbers(int firstNumber, int secondNumber)
+    {
+        // Введите свое решение ниже
+
+
+if (firstNumber < secondNumber) 
+{
+ Console.WriteLine($"первое число меньше второго");
+}
+if (firstNumber > secondNumber) 
+{
+  Console.WriteLine($"первое число больше второго");
+}
+if (firstNumber == secondNumber)
+ {
+   Console.WriteLine($"числа равны");
+  }
+    }
+
+
+  // Не удаляйте и не меняйте метод Main! 
+    static public void Main(string[] args) {
+        int firstNumber, secondNumber;
+
+        if (args.Length >= 2) {
+            firstNumber = int.Parse(args[0]);
+            secondNumber = int.Parse(args[1]);
+        } else {
+           // Здесь вы можете поменять значения для отправки кода на Выполнение
+            firstNumber = 8;
+            secondNumber = 8;
+        }
+
+        // Не удаляйте строки ниже
+        CompareNumbers(firstNumber, secondNumber);
+    }
+}  
+
+
+
+// second task 
+using System;
+
+public class Answer {
+    
+  static int FindMax(int a, int b, int c)
+
+    {
+      // Введите свое решение ниже
+int result = a;
+if (b > result) result = b;
+if (c > result) result = c;
+
+    {
+     Console.WriteLine(" ");
+     return result;
+     }
+  
+
+
+    }
+
+  // Не удаляйте и не меняйте метод Main! 
+  static public void Main(string[] args) {
+        int a, b, c;
+
+        if (args.Length >= 3) {
+           a = int.Parse(args[0]);
+           b = int.Parse(args[1]);
+           c = int.Parse(args[2]);
+        } else {
+           // Здесь вы можете поменять значения для отправки кода на Выполнение
+         
+          a = 0;
+          b = 6;
+          c = 7;
+        }
+
+        // Не удаляйте строки ниже
+        int result = FindMax(a, b, c);
+        System.Console.WriteLine($"{result}");
+    }
+} 
+
+
+
+// third 
+
+using System;
+
+class Answer {
+    static void CheckIfEven(int number)
+    {
+      // Введите свое решение ниже
+ if (number % 2)
+     {Console. WriteLine(" четное");
+    }
+  else 
+  {
+   Console.WriteLine("не четное ");
+  }
+
+  // Не удаляйте и не меняйте метод Main! 
+    static public void Main(string[] args) {
+        int number;
+
+        if (args.Length >= 1) {
+            number = int.Parse(args[0]);
+        }
+         else {
+           // Здесь вы можете поменять значения для отправки кода на Выполнение
+            number = 6;
+        }
+
+        // Не удаляйте строки ниже
+        CheckIfEven(number);
+    }
+}
+}  
+
+
+//fourth 
+
+using System;
+
+public class Answer {
+    static void PrintEvenNumbers(int number)
+    {
+      // Введите свое решение ниже
+
+
+    }
+
+
+  // Не удаляйте и не меняйте метод Main! 
+    static public void Main(string[] args) {
+        int number;
+
+        if (args.Length >= 1) {
+            number = int.Parse(args[0]);
+        } else {
+           // Здесь вы можете поменять значения для отправки кода на Выполнение
+            number = 6;
+        }
+
+        // Не удаляйте строки ниже
+        PrintEvenNumbers(number);
+    }
+} здесь решить 
+
+
+Console.Write(" введите число: ");
+int n = Convert.ToInt32(Console.ReadLine());
+int a = n % 2;
+//int i = a / 2 ;
+
+
+if ( a <= n ) // / 2 ))
+{
+  // i++ ;
+   Console.Write($"{a}");
+   Console.Write(' ');
+    a++; //  i++ ;
+} 
+else 
+{
+   Console.WriteLine("число не четное");
+} */
+
+
+// правильное решение
+
+Console.WriteLine("введите число: ");
+int number = Convert.ToInt32(Console.ReadLine());
+int i = 2; //number % 2;
+while (i <= number)  //% 2 )
+{
+   Console.Write($" {i} ");
+   // Console.Write($" {i} ");
+            i = i + 2;
+}
+  /* else // (i != n % 2);
+{
+   Console.Write("нечетное");
+} */
