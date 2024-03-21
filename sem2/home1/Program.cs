@@ -105,7 +105,7 @@ else
 
         // Console.Write($" {num} {res}, ");
          Console.Write($" {res} ,");
-         Console.WriteLine(); 
+         //Console.WriteLine(); 
     };
 }; 
 
@@ -179,4 +179,48 @@ Console.WriteLine(currentDigit);
 }
 }
 }
-} */
+} 
+
+
+
+
+
+решения с семинара:
+
+int num = new Random().Next(100,1000);
+Console.WriteLine(num);
+int res_01 = num / 100;
+int res_02 = num % 100 / 10;
+int res_03 = num % 100 % 10;
+Console.Write($"{res_01}, ");
+Console.Write($"{res_02}, ");
+Console.Write($"{res_03}");
+
+
+//
+Console.WriteLine("введите число");
+int digit = int.Parse(Console.ReadLine()!);
+if (digit < 10)
+{
+    Console.WriteLine(digit);
+}
+else
+{
+    string s = digit.ToString();
+    for (int i = 0; i <= s.Length - 1; i++)
+    {
+        if (i == s.Length - 1)
+        {
+            Console.Write(s[i]);
+        }
+        else
+        {
+            Console.Write($"{s[i]},");
+        }
+    }
+}
+
+
+
+
+*/
