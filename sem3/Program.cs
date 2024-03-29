@@ -1,94 +1,95 @@
 ﻿//Задайте массив. Напишите программу, которая определяет, присутствует
 // ли заданное число в массиве. Программа должна выдать ответ: Да/Нет.
-/* using System.ComponentModel.DataAnnotations;
-using System.Security.Principal;
-
-Console.Write("введите размер массива: ");
-int n = Convert.ToInt32(Console.ReadLine());
-int[] mas = new int[n];
+// код запоротый, не могу понять сколько там ошибок
+// using System.ComponentModel.DataAnnotations;
+// using System.Security.Principal;
+/* 
+Console.Write("введите размер массива: "); // просим пользователя ввести число
+int n = Convert.ToInt32(Console.ReadLine()); // конвертируем введенное число из строки в числовое значение ( числовой тип данных)
+int[] mas = new int[n]; // создаем новый массив с количеством элементов равному числу пользователя
 
 //Console.WriteLine(mas);
-int ind = 0;
+int ind = 0; // пустая переменная длч цикла while, которой будем проходиться по массиву и выводить его числа на экран ( только те числа, которые оказались в заданном массиве) 
 
-while (ind < mas.Length)
+while (ind < mas.Length) // пока переменная ind проходится по массиву (меньше количества чисел в массиве)
 
 {
-   Console.Write($"{mas[ind]} ");
-   ind++;
+   Console.Write($"{mas[ind]} "); // консоль выводит одно число массива на экран
+   ind++; // на этом этапе переходим к следующему элементу массива
 }
-Console.WriteLine();
+Console.WriteLine(); // просто пустая строка, чтобы не запутаться в выводах
 
 //for  для перебора
-for ( int i = 0; i < mas.Length; i++)
+for ( int i = 0; i < mas.Length; i++) // в этом цикле опять же перебираем все элементы массива: создаем переменную счетчика. проводим цикл до тех пор, пока эта переменная меньше количества чисел в массиве, и так же переходим к следующему элементу
 {
-   Console.Write($"{mas[i]} ");
+   Console.Write($"{mas[i]} "); // выводим полученные числа на экран
 }
-Console.WriteLine();
+Console.WriteLine(); // пустая строка, чтобы не запутаться в выводах
 
 // foreach просто для перебора, проверяет числа, но не меняет их
-foreach ( int item in mas ) // var item in collection
+foreach ( int item in mas ) // var item in collection. цикл форич проверяет ИХ в заданном массиве (их- они, числа в массиве)
 {
-   Console.Write($"{item} ");
+   Console.Write($"{item} "); // опять же выводим полученные числа на экран
 }
-Console.WriteLine(); 
+Console.WriteLine(); // пустая строка
 
 
 // функция 
 void PrintMas(int[] col) // для печати элементов массива
 {
-foreach (int item in col)
+foreach (int item in col) // проверяет числа в массиве
 {
-   Console.Write($"{item} ");
+   Console.Write($"{item} "); // выводит числа на экран
 }
-Console.WriteLine();
+Console.WriteLine(); // пустая строка
 }
-PrintMas(mas); // создали и вывели массив
+PrintMas(mas); // создали и вывели массив, то есть эта строка отсылает к функции и проводит проверку в функии
 
-int[] RandomMas(int[] col);
+int[] RandomMas(int[] col); // создаем массив со случайными числами и передаем в параметры новый массив
 {
-for (int i = 0; i < col.Length; i++);
+for (int i = 0; i < col.Length; i++); // проходимся по элементам массива и заполняем его случайными числами
 {
-   col[i] = new Random().Next(1, 9);
+   col[i] = new Random().Next(1, 9); // случайными числами от 1 до 8, потому что последнее число диапазона не входит в числа
 } 
 
-   return col; 
+   return col; // ритёрн возвращает значения элементов массива после одной итерации 
 }
 
 // обращение к функции
 int[] new_mas = RandomMas(mas); // обращение к первому массиву
-PrintMas(new_mas);
-Console.Write("введите число: ");
-int m = Convert.ToInt32(Console.ReadLine());
-int flag = 0;
-foreach  ( var item in new_mas)
+PrintMas(new_mas); // выводит на экран числа в массиве
+Console.Write("введите число: "); // просим пользователя ввести число
+int m = Convert.ToInt32(Console.ReadLine()); // конвертируем введеное число из строки в числовой тип данных
+int flag = 0; // переменная для проверки нахождения конкретного числа в заданном массиве
+foreach  ( var item in new_mas) // проходимя цикорм по массиву
 {
-   if (item == 5)
+   if (item == 5) // если нужное число находится
    {
-       flag++;
+       flag++; // то передаем нужное искомое число в эту переменную
    }
 }
-if (flag > 0)
+if (flag > 0) // если нужное искомое нами число больше нуля
 {
-   Console.WriteLine("да");
+   Console.WriteLine("да"); // выводим результат на экран, что нужное нам число присутсвует в заданном массиве
 }
-else 
+else // если нужного числа нет
 {
-   Console.WriteLine("нет");
+   Console.WriteLine("нет"); // выводим на экран отрицательный ответ
 }
-string S(int[] col, int m)
+string S(int[] col, int m) // функция для сравнения чисел в найденных переменных 
 {
-   foreach (var item in col)
+   foreach (var item in col) // проходимся по циклу
    {
-       if (col == m) return "да";
+       if (col == m) return "да"; // если нужное нам число совпадает с найденным в массиве (5 = 5), то выводим результат ДА
 }
-return "нет";
+return "нет"; // если нужного числа нет, выводим НЕТ
 };
-Console.WriteLine(new_mas, m); 
+Console.WriteLine(new_mas, m); // выводим на экран результаты 
 
+*/
 
-
-// решение преподавателя 
-
+// решение преподавателя правитльное
+/*
 Console.Write("Введите размерность массива: ");
 int n = Convert.ToInt32(Console.ReadLine());
 int[] mas = new int[n];
@@ -165,7 +166,7 @@ else
 
 }
 
-string S(int[] col, int m)
+string S(int[] col, int m) // функция сравнения чисел между теми. что есть в массиве и тем. которое нужно найти
 {
    foreach (var item in col)
    {
@@ -175,12 +176,13 @@ string S(int[] col, int m)
 }
 
 Console.WriteLine(S(new_mas, m));
+*/ 
 
 
-
-
+/* 
 // Задайте массив из 10 элементов, заполненный числами из промежутка [-10, 10]. 
 Замените отрицательные элементы на положительные, а положительные на отрицательные. 
+*/
 
 using System.ComponentModel.DataAnnotations;
 
@@ -215,10 +217,10 @@ for (int i = 0; i < arr.Length; i++)
 
 }
 
-PrintMas(arr);
+PrintMas(arr); 
 
 // еще одно решение
-
+/*
 class Program
 {
     static void Main()
@@ -309,8 +311,8 @@ while (index < lst.Length / 2)
 
 // Дано натуральное трёхзначное число. Создайте массив, состоящий из цифр этого числа. 
 // Младший разряд числа должен располагаться на 0-м индексе массива, старший – на 2-м.
-
-/ int[] arr = { }
+/* 
+// int[] arr = { }
 // int n = Convert.ToInt32(Console.ReadLine());
 
 string n = Console.ReadLine();
@@ -340,4 +342,81 @@ for ( int i = 0; i < len; i++)
     arr2[i] = Convert.ToInt32(Convert.ToString(n[len - 1 - i])); 
  }
  
- PrintMas(arr2);
+ PrintMas(arr2); */
+
+
+
+
+
+ /* домашние заадачи 
+// 1. Задайте одномерный массив из 10 целых чисел от 1 до 100. Найдите 
+//количество элементов массива, значения которых лежат в отрезке [10,90].
+
+// Начальные условия:
+
+// int[] array = {1, 5, 10, 20, 30, 40, 99, 4, 90, 3}; // Создание массива
+// Выводится: 5
+// Подсказка № 1
+Напишите функцию подсчета элементов массива, попадающих в заданный 
+диапазон, вызовите эту функцию, выведите результат.
+Подсказка № 2
+Объявите функцию подсчета элементов массива. В теле функции создайте 
+цикл, проходящий по всем элементам массива. В теле цикла создайте 
+оператор ветвления с условием, если элемент массива попадает в заданный диапазон,
+ то увеличиваем счетчик на единицу.
+Подсказка № 3
+Вызовите функцию. */
+
+
+/*
+using System;
+using System.Linq;
+
+//Тело класса будет написано студентом. Класс обязан иметь статический метод PrintResult()
+class UserInputToCompileForTest
+{ 
+    // Подсчет количества элементов массива, попадающих в заданный диапазон
+    // numbers - массив, в котором ведется подсчет
+    // minRange - минимальная граница диапазона
+    // maxRange - максимальная граница диапазона
+    public static int CountItemsRange(int[] numbers, int minRange, int maxRange)
+    {
+         //Введите сюда свое решение
+
+    }
+    
+    public static void PrintResult(int[] array)
+    {
+        
+          //Введите сюда свое решение
+    }
+
+}
+
+
+//Не удаляйте и не меняйте класс Answer!
+class Answer
+{
+    public static void Main(string[] args)
+    {
+        int[] array;
+        
+
+        if (args.Length >= 1) {
+            // Объединяем все аргументы командной строки в одну строку
+            string joinedArgs = string.Join(" ", args);
+
+            // Разделяем строку по запятой с пробелом и преобразуем в массив целых чисел
+            array = joinedArgs.Split(", ")
+                                  .Select(int.Parse)
+                                  .ToArray();
+            
+            // Теперь arr содержит преобразованные в целые числа из командной строки
+        
+        } else {
+           // Если аргументов на входе нет
+            array = new int[] {1, 5, 10, 20, 30, 40, 99, 4, 90, 3}; // Создание массива
+        }
+        UserInputToCompileForTest.PrintResult(array);
+    }
+} */
