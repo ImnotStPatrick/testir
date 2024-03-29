@@ -176,13 +176,13 @@ string S(int[] col, int m) // функция сравнения чисел ме�
 }
 
 Console.WriteLine(S(new_mas, m));
-*/ 
+*/
 
 
 /* 
 // Задайте массив из 10 элементов, заполненный числами из промежутка [-10, 10]. 
 Замените отрицательные элементы на положительные, а положительные на отрицательные. 
-*/
+
 
 using System.ComponentModel.DataAnnotations;
 
@@ -218,6 +218,7 @@ for (int i = 0; i < arr.Length; i++)
 }
 
 PrintMas(arr); 
+*/
 
 // еще одно решение
 /*
@@ -274,21 +275,21 @@ class Program
 // 3. Найдите произведения пар чисел в одномерном массиве. 
 //Парой считаем первый и последний элемент, второй и предпоследний и т.д. 
 //Результат запишите в новый массив.
- /*
+/*
 
 int[] Append(int len)
 {
-    int[] list = new int[len];
-    for (int i = 0; i < len; i++)
-    {
-        list[i] = new Random().Next(-100, 101);
-    }
-    foreach (int i in list)
-    {
-        Console.Write(i + " ");
-    }
-    Console.WriteLine();
-    return list;
+   int[] list = new int[len];
+   for (int i = 0; i < len; i++)
+   {
+       list[i] = new Random().Next(-100, 101);
+   }
+   foreach (int i in list)
+   {
+       Console.Write(i + " ");
+   }
+   Console.WriteLine();
+   return list;
 }
 
 var len = 6;
@@ -302,9 +303,9 @@ int index = 0;
 
 while (index < lst.Length / 2)
 {
-    Console.Write(lst[index] * lst[lst.Length - index - 1] + " ");
-    
-    index++;
+   Console.Write(lst[index] * lst[lst.Length - index - 1] + " ");
+
+   index++;
 }
 */
 
@@ -348,7 +349,7 @@ for ( int i = 0; i < len; i++)
 
 
 
- /* домашние заадачи 
+/* домашние заадачи 
 // 1. Задайте одномерный массив из 10 целых чисел от 1 до 100. Найдите 
 //количество элементов массива, значения которых лежат в отрезке [10,90].
 
@@ -363,7 +364,7 @@ for ( int i = 0; i < len; i++)
 Объявите функцию подсчета элементов массива. В теле функции создайте 
 цикл, проходящий по всем элементам массива. В теле цикла создайте 
 оператор ветвления с условием, если элемент массива попадает в заданный диапазон,
- то увеличиваем счетчик на единицу.
+то увеличиваем счетчик на единицу.
 Подсказка № 3
 Вызовите функцию. */
 
@@ -420,3 +421,187 @@ class Answer
         UserInputToCompileForTest.PrintResult(array);
     }
 } */
+/* 
+
+using System.ComponentModel.DataAnnotations;
+using System.Reflection.Metadata.Ecma335;
+
+int[] arr = {1, 55, 48, 6, 3, 769, 85};
+void PrintArray(int[] array)
+{
+    int count = array.Length;
+    for (int i = 0; i < count; i++)
+    {
+        Console.Write($"{array[i]} || ");
+    }
+    Console.WriteLine();
+}
+PrintArray(arr);
+
+void SelectionSort(int[] array) // сортируем массив от меньшего к большему
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+       int min = i;
+        //int temporary = array[i];
+        //array[i] = array[min];
+        //array[min] = temporary;
+        for( int j = i + 1; j < array.Length; j++)
+        {
+            if ( array[j] < array[min] )
+            {
+                min = j;
+            }
+        }
+        int temporary = array[i];
+        array[i] = array[min];
+        array[min] = temporary;
+    }
+}
+
+ void FindMax (int[] array)
+{
+int max = 0;
+for (int i = 0; i < array.Length; i++)
+{
+   /* if (max < array[i])
+    {
+        // найден больший элемент
+        max = array[i];
+        Console.Write($"{max}      ");
+        //i++;
+    }
+    i++;
+    // return max;
+    */
+    /*
+    foreach (int e in array)
+    {
+        if ( e > max)
+        {
+             max = e;
+             Console.Write(e);
+        }
+    } 
+}
+}
+
+
+
+/* 
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+       int min = i;
+       for (int j = i + 0; j < array.Length; j++)
+       {
+        if ( array[j] < array[min])
+        min = j;
+        Console.Write($"{min} []");
+        j++;
+        //Console.Write($"{min} () ");
+       }
+       int temporary = array[i];
+        array[i] = array[min];
+        array[min] = temporary;
+
+    }
+} */
+
+
+//PrintArray(arr); // выводит заданный масив
+//SelectionSort(arr); // сортирует массив
+//PrintArray(arr); // выводит сортированный массив на экран
+//FindMax(arr); // вывод минимального числа
+
+/*
+int[] arr = {1, 5, 4, 3, 2, 6, 7, 1, 1 };
+
+void PrintArray(int[] array)
+{
+    int count = array.Length;
+    for (int i = 0; i < count; i++)
+    {
+        Console.Write($"{array[i]} ");
+
+    }
+    Console.WriteLine();
+}
+PrintArray(arr); 
+ 
+
+ //int[] arr = {1, 5, 4, 3, 2, 6, 7, 1, 1 }; 
+ void SelectionSort(int[]array)
+ {
+    for (int i=0; i< array.Length - 1; i++)
+    {
+        int minPosition = i;
+        for (int j = i +1; j< array.Length; j++)
+        {
+            if (array[j]<array[minPosition])
+            {
+                minPosition= j;
+            }
+        }
+        int temporary = array[i];
+        array[i]= array[minPosition];
+        array[minPosition]= temporary;
+ }
+ }
+ 
+PrintArray(arr);
+SelectionSort(arr);
+//Console.WriteLine("arr");
+PrintArray(arr); */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// решение из интернета
+
+
+Console.Clear();
+//Console.Write("Введите массив: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+double[] array = {0.25, 5.4, 1.3, 2.1, 3.8, 5.2, 3.01};
+double max=0;
+double a;
+double[] array= new double [array];
+for (int i=0; i<array.Length;i++)
+array [i]= 0; // new Random().NextDouble() *100;
+double min = array[0];
+for (int i=0; i<array.Length;i++)
+{
+if (max<array[i])
+max=array[i];
+}
+Console.Write(max);
+for (int i=0; i<array.Length;i++)
+{
+if (min>array[i])
+min=array[i];
+}
+a=max-min;
+Console.Write("  и  "+min);
+Console.WriteLine("\n");
+Console.WriteLine("разница: ");
+Console.WriteLine(a);
+
+
+
+
+
+
+
