@@ -106,7 +106,7 @@ Console.WriteLine();
 PrintMas(Sq(arrRandom));
 
 
-// если значения уже известны и решениепреподавателя 
+// если значения уже известны и решение преподавателя 
 int[,] RandomMas(int[,] col)
 {
     for (int i = 0; i < col.GetLength(0); i++)
