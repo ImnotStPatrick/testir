@@ -1182,21 +1182,21 @@ Console.Write(number + " ");
 
 /*
  */
-using System.Globalization;
 
-Console.WriteLine("спасибо любимый");
+//Console.Clear();
+//Console.WriteLine("спасибо любимый");
 
- // еще раз пробую вывестимассив на экран
- /*
- int[] array = [1, 3, 5, 6, 7, 8];
+// еще раз пробую вывестимассив на экран
+/*
+int[] array = [1, 3, 5, 6, 7, 8];
 
- void Arr (int[] array)
- {
-    for (int i = 0; i < array.Length; i++)
-    {
-        Console.Write($"{array[i]} ");
-    }
- }
+void Arr (int[] array)
+{
+   for (int i = 0; i < array.Length; i++)
+   {
+       Console.Write($"{array[i]} ");
+   }
+}
 
 Arr(array);
 */ // вывела на экран массив
@@ -1210,6 +1210,7 @@ Arr(array);
 
 
 // решение правильное
+/*
 int[] array = [1, 3, 5, 6, 7, 8];
 
 void Mas(int[] array)
@@ -1239,3 +1240,249 @@ void Mis(int[] array)
 
 Mas(array); // вызов функции первого массива
 Mis(array); // вызов вункции второго массива
+*/
+// Console.Clear();
+
+
+
+
+// двухмерные массивы!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+/*Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, и возвращает значение этого элемента или же указание, что такого элемента нет: "Позиция по рядам выходит за пределы массива"
+или
+"Позиция по колонкам выходит за пределы массива"
+
+Позиции в массиве считать от единицы.
+
+
+
+using System;
+
+//Тело класса будет написано студентом. Класс обязан иметь статический метод PrintResult()
+class UserInputToCompileForTest
+{ 
+// Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, и возвращает значение этого элемента или же указание, что такого элемента нет.
+
+// Поиск элемента по позициям
+    public static int FindElementByPosition(int[,] array, int x, int y)
+    {
+        //Напишите свое решение здесь
+        {
+            int[,] numbers = new int[,] {
+                {1, 2, 3, 4},
+                {5, 6, 7, 8},
+                {9, 10, 11, 12}
+            };
+            
+            int result = FindElementByPosition(numbers, x, y);
+            {
+                return result;
+            }
+
+        }
+    }
+
+// Проверка позиций на вхождение в массив
+    public static int ValidatePosition(int[,] array, int x, int y)
+    {
+        //Напишите свое решение здесь
+        if (x < 1 || x > array.GetLength(0))
+        {
+            Console.WriteLine("позиция за пределами массива");
+            return -1;
+        }
+         if (y < 1 || y > array.GetLength(1))
+         {
+            Console.WriteLine("позиция не в массиве ");
+            return -1;
+
+         }
+         return array [x - 1, y - 1];
+    }
+
+    public static void PrintResult(int[,] array, int x, int y)
+    {
+        //Напишите свое решение здесь
+       
+        int res = ValidatePosition(array, x, y); // результат функции передала в переменную
+        {
+            Console.WriteLine(res);
+        }
+    }
+}
+
+//Не удаляйте и не меняйте класс Answer!
+class Answer
+{
+    public static void Main(string[] args)
+    {   
+        int[,] array;
+
+        int x, y;
+
+        if (args.Length >= 3)
+        {
+            // Предполагается, что строки разделены запятой и пробелом, а элементы внутри строк разделены пробелом
+            string[] rows = args[0].Split(',');
+
+            int rowCount = rows.Length;
+            int colCount = rows[0].Trim().Split(' ').Length;
+
+            array = new int[rowCount, colCount];
+
+            for (int i = 0; i < rowCount; i++)
+            {
+                string[] rowElements = rows[i].Trim().Split(' ');
+
+                for (int j = 0; j < colCount; j++)
+                {
+                    if (int.TryParse(rowElements[j], out int result))
+                    {
+                        array[i, j] = result;
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Error parsing element {rowElements[j]} to an integer.");
+                        return;
+                    }
+                }
+            }
+
+            // Парсинг x и y из аргументов
+            if (int.TryParse(args[1], out x) && int.TryParse(args[2], out y))
+            {
+                // Теперь у вас есть двумерный массив "array" и координаты x и y
+                UserInputToCompileForTest.PrintResult(array, x, y);
+            }
+            else
+            {
+                Console.WriteLine("Error parsing x or y to an integer.");
+            }
+        }
+        else
+        {
+           
+            // Если аргументов на входе нет, используем примерный массив
+            array = new int[,]
+            {
+                {1, 2, 3, 4},
+                {5, 6, 7, 8},
+                {9, 10, 11, 12}
+            };
+            x = 2;
+            y = 2;
+            
+            UserInputToCompileForTest.PrintResult(array, x, y);
+
+        }                
+    }
+}
+
+*/
+
+
+/* Задайте прямоугольный двумерный массив. Напишите программу, которая
+ будет находить строку с наименьшей суммой элементов.
+
+Начальные условия:
+
+// Начальные условия
+int[,] numbers = new int[,] {
+    {1, 2, 3},
+    {1, 1, 0},
+    {7, 8, 2},
+    {9, 10, 11}
+};
+Выводится: 1
+*/
+
+//int[,] PrintArr (int[,] numbers)
+/*
+{
+    int[,] number = new int[,] {
+        {1, 2, 3},
+    {1, 1, 0},
+    {7, 8, 2},
+    {9, 10, 11}
+    };
+    for (int i = 0; i < number.GetLength(0); i++)
+    {
+        for(int j = 0; j < number.GetLength(1); j++)
+        {
+           Console.Write($"{number[i, j]} ");
+        }
+        Console.WriteLine();
+    }
+} //Console.WriteLine();
+*/
+
+
+/*
+Задайте прямоугольный двумерный массив. Напишите программу, которая будет находить строку с наименьшей суммой элементов. */
+int Prompt(string message)
+{
+  Console.Write(message);
+  int result = Convert.ToInt32(Console.ReadLine());
+  return result;
+}
+
+int[,] CreateArray(int m, int n)
+{
+  int[,] array = new int[m, n];
+  return array;
+}
+
+void PrintArray(int[,] array)
+{
+  for (int i = 0; i < array.GetLength(0); i++)
+  {
+    for (int j = 0; j < array.GetLength(1); j++)
+    {
+      Console.Write($"{array[i, j]} ");
+    }
+    Console.WriteLine();
+  }
+}
+
+int[,] FillArrayRandom(int[,] array)
+{
+  for (int i = 0; i < array.GetLength(0); i++)
+  {
+    for (int j = 0; j < array.GetLength(1); j++)
+    {
+      array[i, j] = new Random().Next(1, 10);
+    }
+  }
+  return array;
+}
+
+int SumRowArray(int[,] array)
+{
+  int[] sumArr = new int[array.GetLength(0)];
+  // Console.WriteLine($"Сумма по строке:");
+  for (int i = 0; i < array.GetLength(0); i++)
+  {
+    for (int j = 0; j < array.GetLength(1); j++)
+    {
+      sumArr[i] += array[i, j];
+    }
+   // Console.WriteLine($"{i + 1} -> {sumArr[i]}");
+  }
+  int minSum = sumArr[0];
+  int minRow = 1;
+  for (int i = 0; i < array.GetLength(0); i++)
+  {
+    if (sumArr[i] < minSum)
+    {
+      minSum = sumArr[i];
+      minRow = i + 1;
+    }
+  }
+  return minRow;
+}
+
+int[,] array = CreateArray(Prompt("Введите количество строк: "), Prompt("Введите количество столбцов: "));
+array = FillArrayRandom(array);
+PrintArray(array);
+int row = SumRowArray(array);
+Console.WriteLine($"Наименьшая сумма в {row} строке.");
