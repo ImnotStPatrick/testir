@@ -28,7 +28,7 @@ OpenMatryoshka(5); // вызов функции
 call Function;
 
 пример кода: эта функция открывает матрешки до размера 1. то есть открытие матрешки номер 1 можно считать базовым случаем (тривиальной, простой задачей). добавляем условие и параметр равный единице, и когда size будет равен 1 то функция завершиться без рекурсивного вызова.
-*/
+
 void OpenMatryoshka (int size)
 {
 Console.WriteLine($" open russian doll of size {size}...");
@@ -43,6 +43,17 @@ OpenMatryoshka(size -1);
 OpenMatryoshka(5);
 
 
+*/
 
+int Fact(int n)
+{
+    if (n == 1 || n == 0)
+    {
+        Console.WriteLine($"Stop: {n} ");
+        return 1;
+    }
+    Console.WriteLine(n);
+    return n * Fact(n - 1);
+}
 
-
+Console.Write(Fact(5));
