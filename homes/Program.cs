@@ -1418,7 +1418,7 @@ int[,] numbers = new int[,] {
 
 
 /*
-Задайте прямоугольный двумерный массив. Напишите программу, которая будет находить строку с наименьшей суммой элементов. */
+Задайте прямоугольный двумерный массив. Напишите программу, которая будет находить строку с наименьшей суммой элементов. 
 int Prompt(string message)
 {
   Console.Write(message);
@@ -1486,3 +1486,542 @@ array = FillArrayRandom(array);
 PrintArray(array);
 int row = SumRowArray(array);
 Console.WriteLine($"Наименьшая сумма в {row} строке.");
+ */ //код работает
+
+
+// Задача 1: Задайте двумерный массив символов (тип char [,]). Создать строку из символов этого массива.
+
+/*
+
+public class Task1
+{
+public static void Main(string[] args)
+{
+// Инициализация двумерного массива символов
+char[,] charArray = new char[,] { { 'a', 'b', 'd'}, { 'c', 'd', 'e' } };
+// Вызов метода для создания строки из 2D массива
+string result = CreateStringFrom2DArray(charArray);
+// Вывод результата
+Console.WriteLine(result);
+}
+// Метод для создания строки из двумерного массива символов
+public static string CreateStringFrom2DArray(char[,] array)
+{
+string result = "";
+// Цикл по каждому элементу в двумерном массиве
+for (int i = 0; i < array.GetLength(0); i++)
+{
+for (int j = 0; j < array.GetLength(1); j++)
+{
+// Добавление каждого символа в результирующую строку
+result += array[i, j];
+}
+}
+    return result; // 
+
+}
+} 
+*/
+
+
+
+/* // решенная задача
+
+public class Task1
+{
+  public static void Main  (string[] args) // public static void Main(string[] args)
+{
+  char[,] chars = new char[,] { { 'a', 'b', 'd'}, { 'c', 'd', 'e' } }; //char[,] charArray = new char[,] { { 'a', 'b', 'd'}, { 'c', 'd', 'e' } };
+  string result = CharString(chars); // string result = CreateStringFrom2DArray(charArray);
+  Console.WriteLine(result); // Console.WriteLine(result);
+}
+
+  public static string CharString (char[,] chars) // public static string CreateStringFrom2DArray(char[,] array)
+{
+    string result = ""; // string result = "";
+    for (int i = 0; i < chars.GetLength(0); i++) // for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < chars.GetLength(1); j++) // for (int j = 0; j < array.GetLength(1); j++)
+        {
+            result += chars[i, j]; // result += array[i, j];
+        }
+        
+    }
+    return result; // return result;
+    
+}
+}
+*/
+
+/*
+using System.Xml.XPath;
+public class Task1
+{
+public static void Main (string[] arg) // создаем одномерный массив из двумерного
+{
+  char[,] mas = new char[,] { {'a', 'b', 'c'}, {'d', 'e', 'f'} };
+  string result = Message(mas);
+  Console.WriteLine(result);
+}
+
+public static string Message (char[,] mas)
+{
+    string res = "";
+    for (int i = 0; i < mas.GetLength(0); i++)
+    {
+        for (int j = 0; j < mas.GetLength(1); j++)
+        {
+            res += mas[i, j];
+        } 
+    }
+    return res;
+}
+}
+
+*/
+
+// Console.Clear(); работает.
+/* 
+public class Home1
+{
+    public static void Main (string[] a)
+    {
+        char[,] x = new char[,] { {'a', 'b'}, {'c', 'd'} };
+        string love = Loving(x);
+        Console.WriteLine(love);
+    }
+
+    public static string Loving (char[,] x)
+    {
+        string answer = "";
+        for (int i = 0; i < x.GetLength(0); i++)
+        {
+            for (int j = 0; j < x.GetLength(1); j++)
+            {
+               answer += x[i, j];
+            }
+        }
+        return answer;
+    }
+}
+
+*/
+
+
+
+//Задача 2: Замена заглавных букв на строчные в строке
+/*
+public class Task2
+{
+public static void Main(string[] args)
+{
+// Входная строка со смешанными буквами обоих регистров
+string input = "aBcD1ef!-";
+// Преобразование всех заглавных букв в строчные
+string result = input.ToLower();
+// Вывод результата
+Console.WriteLine(result);
+}
+} */
+
+
+/* замена больших букв в строке на маленькую
+string input = "aUnUluUU1!UaSdUUU";
+string result = input.ToLower();
+Console.WriteLine(result);
+*/
+
+
+// Console.Clear
+/*
+Console.WriteLine(" введите данные до 5 символов: ");
+string str = Convert.ToString(Console.ReadLine());
+
+  for (int i = 0; i < str.Length / 2; ++i)
+       { if (str[i] != str[str.Length - 1 - i]) 
+       {
+        Console.WriteLine("число или слово не палиндром");
+       }
+       else 
+       {
+        Console.WriteLine(" палиндром");
+       }
+       
+       }
+   
+*/
+/*
+public class Task4
+{
+public static void Main(string[] args)
+{
+// Входная строка со словами, разделенными пробелами
+string input = "привет меня зовут";
+// Вызов метода для обращения порядка слов в строке
+string result = ReverseWords(input);
+// Вывод результата
+Console.WriteLine(result);
+}
+// Метод для обращения порядка слов в строке
+public static string ReverseWords(string str)
+{
+// Разделение строки на слова
+string[] words = str.Split(' ');
+// Обращение порядка слов
+Array.Reverse(words);
+// Соединение слов обратно в строку с пробелами
+return string.Join(" ", words);
+}
+} */
+
+
+
+
+/*
+public class Task4
+{
+public static void Main(string[] args)
+{
+// Входная строка со словами, разделенными пробелами
+string input = "привет меня зовут";
+// Вызов метода для обращения порядка слов в строке
+string result = ReverseWords(input);
+// Вывод результата
+Console.WriteLine(result);
+}
+// Метод для обращения порядка слов в строке
+public static string ReverseWords(string str)
+{
+// Разделение строки на слова
+string[] words = str.Split(' ');
+// Обращение порядка слов
+Array.Reverse(words);
+// Соединение слов обратно в строку с пробелами
+return string.Join(" ", words);
+}
+} вернусь к этому позже */
+
+
+
+// вывод  МАССИВА на экран
+/*
+ int[,] numbers = new int[,] {
+    {1, 2, 3, 4},
+    {5, 6, 7, 8},
+    {9, 10, 11, 12}
+}; 
+ int[,] PrintMas(int[,] numbers)
+ {
+    for(int i = 0; i < numbers.GetLength(0); i++)
+    {
+        for (int j = 0; j < numbers.GetLength(1); j++)
+        {
+            Console.Write($"{numbers[i, j]} ");
+            
+        }
+        Console.WriteLine();
+        
+    }
+    return numbers;
+ }
+
+ int[,] x = PrintMas(numbers);
+Console.WriteLine(x); */
+
+
+
+
+
+//{
+//Тело класса будет написано студентом. Класс обязан иметь статический метод PrintResult()
+//class UserInputToCompileForTest
+//{
+// Печать массива
+// public static 
+/*
+ void PrintArray(int[,] array)
+ {
+     //Напишите свое решение здесь
+    for(int i = 0; i < array.GetLength(0); i++)
+ {
+     for (int j = 0; j < array.GetLength(1); j++)
+     {
+         Console.Write($"{array[i, j]} ");
+
+     }
+     Console.WriteLine();
+
+ }
+ //return array;
+}
+
+ //}
+
+// Обмен первой с последней строкой
+// public static
+  int[,] SwapFirstLastRows(int[,] array)
+ {
+     //Напишите свое решение здесь
+     for(int i = 0; i < array.GetLength(1); i++)
+         {
+             var tmp = array[2, i];
+             array[2, i] = array[0, i];
+             array[0, i] = tmp;
+             Console.WriteLine($"{tmp}, {array[2, i]}");
+         }
+
+ }
+
+// Обмен элементами массива
+ //public static 
+ //void SwapItems(int[,] array, int i)
+ //{
+    //Напишите свое решение здесь
+ //}
+
+ //public static
+  void PrintResult(int[,] numbers)
+ {
+     //Напишите свое решение здесь
+    for(int i = 0; i < numbers.GetLength(0); i++)
+         {
+             for(int j = 0; j < numbers.GetLength(1); j++)
+             {
+                 Console.Write(numbers[i,j] + " ");
+             }
+             Console.WriteLine();
+         }
+ }
+//}
+
+//Не удаляйте и не меняйте класс Answer!
+//class Answer
+//{
+ //public static
+  void Main(string[] args)
+ {
+     int[,] numbers;
+
+     if (args.Length >= 1)
+     {
+         // Предполагается, что строки разделены запятой и пробелом, а элементы внутри строк разделены пробелом
+         string[] rows = args[0].Split(',');
+
+         int rowCount = rows.Length;
+         int colCount = rows[0].Trim().Split(' ').Length;
+
+         numbers = new int[rowCount, colCount];
+
+         for (int i = 0; i < rowCount; i++)
+         {
+             string[] rowElements = rows[i].Trim().Split(' ');
+
+             for (int j = 0; j < colCount; j++)
+             {
+                 if (int.TryParse(rowElements[j], out int result))
+                 {
+                     numbers[i, j] = result;
+                 }
+                 else
+                 {
+                     Console.WriteLine($"Error parsing element {rowElements[j]} to an integer.");
+                     return;
+                 }
+             }
+         }
+     }
+     else
+     {
+         // Если аргументов на входе нет, используем примерный массив
+        numbers = new int[,]
+         {
+             {1, 2, 3, 4},
+             {5, 6, 7, 8},
+             {9, 10, 11, 12}
+         }; 
+     }
+     UserInputToCompileForTest.PrintResult(numbers);
+ }
+
+
+
+*/
+// решение 
+/*
+    var array = new int[3, 4]
+            { { 1, 2, 3, 4 },
+              { 0, 0, 0, 0 },
+             
+              { 5, 6, 7, 8 }
+            };
+            for(int i = 0; i < array.GetLength(1); i++)
+            {
+                var tmp = array[2, i];
+                array[2, i] = array[0, i];
+                array[0, i] = tmp;
+            }
+            for(int i = 0; i < array.GetLength(0); i++)
+            {
+                for(int j = 0; j < array.GetLength(1); j++)
+                {
+                    Console.Write(array[i,j] + " ");
+                }
+                Console.WriteLine();
+            }
+            Console.ReadKey(true);
+    */
+
+
+
+/*
+
+int[,] numbers = new int[,] {
+    {1, 2, 3, 4},
+    {5, 6, 7, 8},
+    {9, 10, 11, 12},
+    {13, 14, 15, 16,},
+    {17, 18, 19, 20},
+    {21, 22, 23, 24, 25}
+};
+
+void Mas (int[,] array) // вывод массива на экран
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            Console.Write($"{array[i, j]} ");
+        }
+        Console.WriteLine();
+    }
+}
+
+void Pere (int[,] array)
+{  
+    for(int i = 0; i < array.GetLength(1); i++)
+            {
+                var tmp = array[4, i];
+                array[4, i] = array[0, i];
+                array[0, i] = tmp;
+            }
+            for(int i = 0; i < array.GetLength(0); i++)
+            {
+                for(int j = 0; j < array.GetLength(1); j++)
+                {
+                    Console.Write(array[i,j] + " ");
+                }
+                Console.WriteLine();
+            }
+            
+}
+
+
+
+
+Mas(numbers); //вывод массива на экран
+Pere(numbers); // вывод перевернутого массива на экран
+
+*/
+ 
+
+
+
+ // ответ нейросети
+/*
+ int[,] numbers = new int[,] {
+    {1, 2, 3, 4},
+    {5, 6, 7, 8},
+    {9, 10, 11, 12},
+    {13, 14, 15, 16,},
+    {17, 18, 19, 20}
+   // {21, 22, 23, 24,}
+};
+Console.WriteLine("исходный массив ");
+PrintArray(numbers);
+/*
+int temp;
+int n = numbers.GetLength(1);
+for (int i = 0; i < n; i++)
+{
+    temp = numbers[0, i];
+    numbers[0, i] = numbers[numbers.GetLength(0) - 1, i];
+    numbers[numbers.GetLength(0) - 1, i] = temp;
+}
+*/
+/*
+Console.WriteLine("массив после обмена строк: ");
+ void Pere (int[,] numbers)
+ {
+int temp;
+int n = numbers.GetLength(1);
+for (int i = 0; i < n; i++)
+{
+    temp = numbers[0, i];
+    numbers[0, i] = numbers[numbers.GetLength(0) - 1, i];
+    numbers[numbers.GetLength(0) - 1, i] = temp;
+   // Console.Write($"{temp} ");
+}
+ }
+
+ int[,] zz = Pere;
+PrintArray(zz);
+
+void PrintArray(int[,] numbers)
+{
+    for  (int i = 0; i < numbers.GetLength(0); i++)
+    {
+        for (int j = 0; j < numbers.GetLength(1); j++)
+        {
+            Console.Write($"{numbers[i, j]}   ");
+        }
+        Console.WriteLine();
+    }
+}
+*/
+
+
+
+
+int[,] numbers = new int[,] {
+    {1, 2, 3, 4},
+    {5, 6, 7, 8},
+    {9, 10, 11, 12},
+    {13, 14, 15, 16 }
+};
+
+void Mas(int[,] array) // вывод массива на экран
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            Console.Write($"{array[i, j]} ");
+        }
+        Console.WriteLine();
+    }
+}
+
+void Pere(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(1); i++)
+    {
+        var tmp = array[3, i];
+        array[3, i] = array[0, i];
+
+        array[0, i] = tmp;
+        {
+        for (int k = 0; k < array.GetLength(0); k++)
+        {
+            for (int j = 0; j < array.GetLength(1); j++)
+            {
+                Console.Write(array[k, j] + " ");
+            }
+            Console.WriteLine();
+        }
+
+    }
+    }
+
+    Mas(numbers);
+    Console.WriteLine(" empty ");
+    Pere(numbers); }
