@@ -303,7 +303,7 @@ Print(num2);
 double[] num3 = Middle(num2, num1);
 Print2(num3);
 
-
+// посмотреть позже
 
 
 
